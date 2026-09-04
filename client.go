@@ -16,6 +16,7 @@ type Client struct {
 	users        *api.Users
 	events       *api.Events
 	messageTypes *api.MessageTypes
+	templates    *api.Templates
 }
 
 func NewClient(apiKey string, opts ...ConfigOption) *Client {
@@ -37,6 +38,7 @@ func NewClient(apiKey string, opts ...ConfigOption) *Client {
 		users:        api.NewUsersApi(apiKey, httpClient, cfg.logger, cfg.limiter),
 		events:       api.NewEventsApi(apiKey, httpClient, cfg.logger, cfg.limiter),
 		messageTypes: api.NewMessageTypesApi(apiKey, httpClient, cfg.logger, cfg.limiter),
+		templates:    api.NewTemplatesApi(apiKey, httpClient, cfg.logger, cfg.limiter),
 	}
 }
 
@@ -66,4 +68,9 @@ func (c *Client) Events() *api.Events {
 
 func (c *Client) MessageTypes() *api.MessageTypes {
 	return c.messageTypes
+}
+
+// Templates returns the project templates API client.
+func (c *Client) Templates() *api.Templates {
+	return c.templates
 }
