@@ -256,7 +256,7 @@ The following table shows which [Iterable API endpoints](https://api.iterable.co
 | Subscribe a single user                                   | GET `/api/subscriptions/{subGroup}/{subGroupId}/user/{userEmail}`     |           |       |
 |                                                           |
 | **Templates**                                             |
-| Get project templates                                     | GET `/api/templates`                                                  |           |       |
+| Get project templates                                     | GET `/api/templates`                                                  | ✅         |       |
 | Bulk delete templates                                     | POST `/api/templates/bulkDelete`                                      |           |       |
 | Get an email template by templateId                       | GET `/api/templates/email/get`                                        |           |       |
 | Update email template                                     | POST `/api/templates/email/update`                                    |           |       |
