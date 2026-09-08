@@ -1,6 +1,5 @@
 package types
 
-// Template describes project template metadata.
 type Template struct {
 	TemplateId       int64  `json:"templateId"`
 	CampaignId       int64  `json:"campaignId,omitempty"`
@@ -12,7 +11,6 @@ type Template struct {
 	UpdatedAt        string `json:"updatedAt"`
 }
 
-// TemplatesResponse contains one page of project template metadata.
 type TemplatesResponse struct {
 	Templates           []Template `json:"templates"`
 	NextPageUrl         string     `json:"nextPageUrl,omitempty"`

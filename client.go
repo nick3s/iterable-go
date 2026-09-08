@@ -70,7 +70,6 @@ func (c *Client) MessageTypes() *api.MessageTypes {
 	return c.messageTypes
 }
 
-// Templates returns the project templates API client.
 func (c *Client) Templates() *api.Templates {
 	return c.templates
 }
